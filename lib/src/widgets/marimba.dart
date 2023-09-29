@@ -16,10 +16,10 @@ class _MarimbaWidgetState extends State<MarimbaWidget> {
   int selectedIndex = -1;
 
   Future<void> playAudio(int index) async {
-    if (index >= 0 && index < tarotDeck.length) {
+    if (index >= 0 && index < marimbaKaeyData.length) {
       await audioPlayer.stop();
       await audioPlayer.play(
-        AssetSource(tarotDeck[index].soundKey),
+        AssetSource(marimbaKaeyData[index].soundKey),
       );
 
       setState(() {
@@ -58,8 +58,8 @@ class _MarimbaWidgetState extends State<MarimbaWidget> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
-                    children: List.generate(tarotDeck.length, (index) {
-                      final marimbaKey = tarotDeck[index];
+                    children: List.generate(marimbaKaeyData.length, (index) {
+                      final marimbaKey = marimbaKaeyData[index];
                       return GestureDetector(
                         onTap: () {
                           setState(() {

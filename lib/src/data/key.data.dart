@@ -1,7 +1,7 @@
 import 'package:game/src/models/marimba_key.model.dart';
 import 'package:flutter/material.dart';
 
-final List<MarimbaKey> tarotDeck = [
+final List<MarimbaKey> marimbaKaeyData = [
   MarimbaKey(
     Colors.red,
     'sounds/marimba1.mp3',
